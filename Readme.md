@@ -1,4 +1,4 @@
-## Mini things I've built while playing with arduino
+## Things I've built while playing with arduino
 
 #### Arduino Uno
 
@@ -19,6 +19,12 @@ Analogue pins take analogue values (voltage readings from a sensor) and convert 
 
 These are digital pins then can be reprogrammed for analogue output using sketch.
 
+```
+R (resistance) = V (voltage) / I (current)
+V = R * I;
+I = V / R 
+```
+
 ### Code
 
 * Each arduino program **must** have
@@ -35,11 +41,13 @@ void loop() {
 ```
 
 ```c#
-
 pinMode(pin, mode);         // pin - pin num on arduino board; mode - OUTPUT or INPUT
 
+analogRead(pin);            // Reads the value from the specified analog pin
 
 digitalWrite(pin, mode);     // turns pin on or off (pin must be set as OUTPUT). HIGH/LOW
+digitalRread(pin);          // Reads the value from a specified digital pin, either HIGH or LOW.
+
 delay(ms);                  // delay action
 
 ```
